@@ -1,0 +1,38 @@
+<!-- HTML for Attendance Page -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Records</title>
+</head>
+
+<body>
+
+    <h1>Attendance Records</h1>
+
+    <table>
+        <tr>
+            <th>Student Name</th>
+            <th>Check-in Dates</th>
+        </tr>
+
+        {% for student in attendanceList %}
+        <tr>
+            <td>{{ student.name }}</td>
+            <td>
+                {% if student.checkins %}
+                    {{ student.checkins | join(', ') }}
+                {% else %}
+                    No Check-ins
+                {% endif %}
+            </td>
+        </tr>
+
+        {% endfor %}
+    </table>
+
+</body>
+
+</html>
