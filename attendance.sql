@@ -4,5 +4,5 @@ DROP TABLE IF EXISTS attendance;
 
 CREATE TABLE attendance (
     id INTEGER PRIMARY KEY, -- foreign key referencing students table
-    checkInTime DATETIME DEFAULT CURRENT_TIMESTAMP -- timestamp of check-in
+    checkInTime DATETIME DEFAULT CURRENT_TIMESTAMP -- timestamp of check-in   - need to update to a list or something
 );
