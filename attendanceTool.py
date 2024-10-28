@@ -46,7 +46,7 @@ def checkIn():
                 conn.close()
 
                 flash('Check-in successful!')
-            except Exception as e:
+            except Exception:
                 flash('An error occurred while checking in.')
         else:
             flash('Please select a student to check in.')
