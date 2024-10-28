@@ -6,6 +6,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Attendance Records</title>
+    <style>
+        /* adds a line between each student's record */
+        .checkin-timestamps
+        {
+            margin-bottom: 10px;
+        }
+        .separator 
+        {
+            margin: 5px 0;
+        }
+    </style>
 </head>
 
 <body>
@@ -23,16 +34,20 @@
             <td>{{ student.name }}</td>
             <td>
                 {% if student.checkins %}
-                    {{ student.checkins | join(', ') }}
+                    <div class="checkin-timestamps">
+                        {{ student.checkins | join('<br>') | safe }}
+                    </div>
+                    <div class="separator"><hr></div>
                 {% else %}
-                    No Check-ins
+                    <div class="no-checkin">
+                        No Check-Ins
+                    </div>
+                    <div class="separator"><hr></div>
                 {% endif %}
             </td>
         </tr>
-
         {% endfor %}
     </table>
 
 </body>
-
 </html>
