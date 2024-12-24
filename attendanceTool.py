@@ -1,5 +1,5 @@
 # Attendance Tool for CSC 4350 with Dr. Hatch
-# Jacob Davis, Pierre Djaroueh, Creed Warf
+# Jacob Davis
 
 
 
